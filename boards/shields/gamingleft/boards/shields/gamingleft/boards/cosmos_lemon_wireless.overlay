@@ -1,4 +1,5 @@
 #include <dt-bindings/led/led.h>
+#include "../vik_shield_dts_preprocess.h"
 
 &pinctrl {
     spi3_default: spi3_default {
@@ -64,32 +65,13 @@
     };
 };
 
-&i2c0 {
-    status = "okay";
-    compatible = "nordic,nrf-twi"; // Adjust depending on your MCU (e.g., nordic,nrf-twim)
-    sda-pin = 15; // Replace X with your MCU's SDA GPIO pin number
-    scl-pin = 13; // Replace Y with your MCU's SCL GPIO pin number
-
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        segment-remap;
-        com-invdir;
-        prechargep = <0x22>;
-    };
-};
-
-/ {
-    chosen {
-        zephyr,display = &oled;
-    };
-};
 
 vik_i2c: &i2c0 {};
 vik_spi: &spi1 {};
+
+// if this is ever updated in the xivik vik_connector.dtsi, this needs to be updated as well
+&i2c0_default {
+    group1 {
+        bias-pull-up;
+    };
+};

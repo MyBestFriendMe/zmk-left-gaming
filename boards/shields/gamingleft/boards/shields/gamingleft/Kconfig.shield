@@ -1,0 +1,9 @@
+
+config SHIELD_gamingleft_LEFT
+    def_bool $(shields_list_contains,gamingleft_left)
+
+config SHIELD_gamingleft_RIGHT
+    def_bool $(shields_list_contains,gamingleft_right)
+
+config SHIELD_VIK_DISPLAY_I2C
+	def_bool $(shields_list_contains,vik_display_i2c)

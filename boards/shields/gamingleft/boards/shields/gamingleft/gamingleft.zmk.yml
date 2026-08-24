@@ -1,0 +1,14 @@
+file_format: "1"
+id: gamingleft
+name: gaming-left
+type: shield
+url: https://github.com/rianadon/Cosmos-Keyboards
+features:
+  - keys
+  - underglow
+  - encoder
+  - studio
+exposes:
+  - oled
+siblings:
+  - gamingleft
