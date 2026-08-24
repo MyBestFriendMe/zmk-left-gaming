@@ -1,0 +1,14 @@
+#include "gamingleft.dtsi"
+
+/ {
+    bootloader_key: bootloader_key {
+        compatible = "zmk,boot-magic-key";
+        key-position = <24>;
+        jump-to-bootloader;
+    };
+};
+
+&unibody_encoder {
+    status = "okay";
+};
+

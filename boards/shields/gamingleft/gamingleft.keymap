@@ -1,0 +1,36 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <&kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
+                        &kp ESC &kp TAB &kp Q &kp W &kp E &kp R 
+                        &kp V &kp LSHIFT &kp A &kp S &kp D &kp F 
+                        &kp M &kp B &kp Z &kp X &kp SPACE &kp G 
+                        &studio_unlock &kp SPACE &kp LGUI &kp H 
+                                                    &kp SPACE &kp SPACE &kp HOME    &kp SPACE>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        extra1 {
+            bindings = <&kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 
+                        &kp ESC &kp TAB &kp Q &kp W &kp E &kp R 
+                        &kp V &kp LSHIFT &kp A &kp S &kp D &kp F 
+                        &kp M &kp B &kp Z &kp X &kp C &kp G 
+                        &studio_unlock &kp SPACE &kp LGUI &kp H 
+                                                    &kp SPACE &kp SPACE &kp HOME    &kp SPACE>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        extra2 {
+            status = "reserved";
+        };
+
+        extra3 {
+            status = "reserved";
+        };
+    };
+};
